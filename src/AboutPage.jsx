@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import image3 from '/src/assets/3.jpg';
+import resume from '/src/assets/Documents/Resume.pdf'; 
+
 
 export default function AboutPage({ aboutY }) {
   return (
@@ -41,7 +44,7 @@ export default function AboutPage({ aboutY }) {
             <div className="absolute transition duration-300 transform rounded-lg -inset-1 sm:-inset-2 bg-gradient-to-br from-amber-100 to-orange-100 rotate-1 group-hover:rotate-2"></div>
             <div className="relative overflow-hidden border-4 border-white rounded-lg shadow-lg aspect-square">
               <img
-                src="/src/assets/3.jpg"
+                src={image3}
                 alt="Profile"
                 className="object-cover w-full h-full transition duration-500 transform group-hover:scale-105"
               />
@@ -97,7 +100,7 @@ export default function AboutPage({ aboutY }) {
               viewport={{ once: true }}
             >
               <a
-                href="/src/assets/Documents/Resume.pdf"
+                href={resume}
                 download
                 className="inline-block px-4 py-2 text-sm font-medium text-white transition bg-amber-500 rounded-full shadow-md hover:bg-amber-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
               >
