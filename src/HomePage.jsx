@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import image3 from '/src/assets/3.jpg';
 export default function HomePage({ scale, rotate, opacity, zIndex , scrollToSection}) {
   return (
     <motion.section 
@@ -88,7 +89,7 @@ export default function HomePage({ scale, rotate, opacity, zIndex , scrollToSect
             >
               {/* Replace with your actual photo */}
               <img 
-                src="/src/assets/3.jpg" 
+                src={image3} 
                 alt="Priya Chauhan"
                 className="object-cover w-full h-full"
               />
