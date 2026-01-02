@@ -1,14 +1,13 @@
-import { motion } from 'framer-motion';
-import image3 from '/src/assets/3.jpg';
-import resume from '/src/assets/Documents/Resume.pdf'; 
-
+import { motion } from "framer-motion";
+import image3 from "/src/assets/3.jpg";
+import resume from "/src/assets/Documents/UIUX Designer.pdf";
 
 export default function AboutPage({ aboutY }) {
   return (
     <motion.section
       id="about"
       className="flex items-center justify-center min-w-full px-2 py-2 bg-white snap-start"
-      style={{ y: aboutY, minHeight: 'calc(100vh - 64px)' }}
+      style={{ y: aboutY, minHeight: "calc(100vh - 64px)" }}
     >
       <div className="w-full max-w-6xl mx-auto">
         {/* Section header */}
@@ -22,8 +21,8 @@ export default function AboutPage({ aboutY }) {
           <motion.h2
             className="px-1 mb-1 text-2xl font-bold text-gray-800 sm:text-3xl md:text-4xl lg:text-5xl md:mb-2"
             whileHover={{
-              letterSpacing: ['0px', '1px', '0px'],
-              transition: { duration: 0.3 }
+              letterSpacing: ["0px", "1px", "0px"],
+              transition: { duration: 0.3 },
             }}
           >
             About Me
@@ -49,8 +48,12 @@ export default function AboutPage({ aboutY }) {
                 className="object-cover w-full h-full transition duration-500 transform group-hover:scale-105"
               />
               <div className="absolute bottom-0 left-0 right-0 p-1 text-center bg-white/90 md:p-2 image-caption">
-                <p className="text-xs font-medium text-gray-800 md:text-sm">React Developer, 2025</p>
-                <p className="text-xs text-gray-600 md:text-sm">React · JavaScript · Tailwind</p>
+                <p className="text-xs font-medium text-gray-800 md:text-sm">
+                  UI/UX Designer, 2025
+                </p>
+                <p className="text-xs text-gray-600 md:text-sm">
+                  React · JavaScript · Tailwind
+                </p>
               </div>
             </div>
           </motion.div>
@@ -64,34 +67,53 @@ export default function AboutPage({ aboutY }) {
             viewport={{ once: true }}
           >
             <motion.p className="text-sm leading-relaxed text-gray-700 md:text-base bio-text">
-              With a deep focus on <span className="font-semibold text-amber-600">UI/UX,</span> I approach frontend development as a blend of logic and creativity. Using react I craft user-first experiences that feel intuitive and look beautiful.
+              With a deep focus on{" "}
+              <span className="font-semibold text-amber-600">
+                UI/UX design,
+              </span>{" "}
+              I prioritize creating thoughtful, user-centered experiences.
+              Frontend development supports this process—using React to
+              translate design intent into intuitive, visually refined
+              interfaces.
             </motion.p>
 
             <motion.p className="text-sm leading-relaxed text-gray-700 md:text-base bio-text">
-              My work lives where design meets <span className="font-medium text-gray-900">development—bringing ideas to life</span> through <span className="font-medium text-gray-900"> smooth interactions, and interfaces </span>, that truly connect with users.
+              My work lives where design meets{" "}
+              <span className="font-medium text-gray-900">
+                development—bringing ideas to life
+              </span>{" "}
+              through{" "}
+              <span className="font-medium text-gray-900">
+                {" "}
+                smooth interactions, and interfaces{" "}
+              </span>
+              , that truly connect with users.
             </motion.p>
 
-           
             {/* Skills section */}
             <motion.div className="pt-4 md:pt-5 skills-container">
-              <h3 className="mb-1 text-xs font-medium tracking-wider text-gray-500 uppercase md:text-sm md:mb-2">PRIMARY MEDIUMS</h3>
+              <h3 className="mb-1 text-xs font-medium tracking-wider text-gray-500 uppercase md:text-sm md:mb-2">
+                PRIMARY MEDIUMS
+              </h3>
               <div className="grid grid-cols-2 gap-1 sm:grid-cols-3">
-                {['React', 'JavaScript', 'PHP', 'CSS', 'UI - UX'].map((skill) => (
-                  <motion.div
-                    key={skill}
-                    className="px-2 py-1 text-xs text-center text-gray-800 bg-gray-100 border border-gray-200 rounded-full md:text-sm md:px-3 md:py-2 skill-pill"
-                    whileHover={{
-                      backgroundColor: '#fef3c7',
-                      color: '#92400e',
-                      y: -2
-                    }}
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
+                {["UI - UX", "Figma", "React", "JavaScript", "CSS"].map(
+                  (skill) => (
+                    <motion.div
+                      key={skill}
+                      className="px-2 py-1 text-xs text-center text-gray-800 bg-gray-100 border border-gray-200 rounded-full md:text-sm md:px-3 md:py-2 skill-pill"
+                      whileHover={{
+                        backgroundColor: "#fef3c7",
+                        color: "#92400e",
+                        y: -2,
+                      }}
+                    >
+                      {skill}
+                    </motion.div>
+                  )
+                )}
               </div>
             </motion.div>
-             {/* Resume download button */}
+            {/* Resume download button */}
             <motion.div
               className="pt-2"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -102,12 +124,11 @@ export default function AboutPage({ aboutY }) {
               <a
                 href={resume}
                 download
-                className="inline-block px-4 py-2 text-sm font-medium text-white transition bg-amber-500 rounded-full shadow-md hover:bg-amber-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+                className="inline-block px-4 py-2 text-sm font-medium text-white transition rounded-full shadow-md bg-amber-500 hover:bg-amber-600 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
               >
                 Download Resume
               </a>
             </motion.div>
-
           </motion.div>
         </div>
       </div>

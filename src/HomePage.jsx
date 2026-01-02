@@ -47,7 +47,7 @@ export default function HomePage({ scale, rotate, opacity, zIndex , scrollToSect
                 className="mb-8 text-xl text-gray-600 md:text-2xl"
                 whileHover={{ scale: 1.01 }}
               >
-                Frontend Developer & UI Designer
+                UI/UX Designer
               </motion.p>
               <motion.div
                 className="flex justify-center gap-4 md:justify-start"
